@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Calculator Dash App</title>
+  <!-- Add any necessary CSS or script links here -->
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdn.plot.ly/dash/1.20.0/dash.min.js"></script>
+  <script>
+    // Import your Dash app code here
+    async function loadApp() {
+      const response = await fetch('C:\Users\pdnguyen\OneDrive - The Solaria Corporation\Documents\calc_call\calc_call.py');
+      const appCode = await response.text();
+      const appModule = await dashjs.moduleFromText(appCode);
+      const app = appModule.app;
+      await app.start();
+    }
+    loadApp();
+  </script>
+</body>
+</html>
