@@ -11,7 +11,7 @@
   <script>
     // Import your Dash app code here
     async function loadApp() {
-      const response = await fetch('C:\Users\pdnguyen\OneDrive - The Solaria Corporation\Documents\calc_call\calc_call.py');
+      const response = await fetch('https://github.com/Epyonn/calc_call_app/blob/e82c5607dd3ada48cab6babbfb7d49af4680a513/calc_call.py');
       const appCode = await response.text();
       const appModule = await dashjs.moduleFromText(appCode);
       const app = appModule.app;
